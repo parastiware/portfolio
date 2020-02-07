@@ -10,9 +10,6 @@
     <title>Document</title>
 </head>
 <body>
-
-<?php include "connect.php"?>
-
 <div class="centered-form">
 <div class="form-title">
 <h1>Admin login</h1>
@@ -26,8 +23,8 @@
 <input type="password" name="password" placeholder="Password" on>
 <span id="passerr"></span>
 <button class="login btn" type="submit">login</button>
-</form>
 <?php
+include "connect.php";
 $inuser=$_POST['username'];
 $inpass=$_POST['password'];
 $sel="SELECT*from admintab order by id asc";
@@ -45,6 +42,7 @@ while($row=mysqli_fetch_assoc($res)){
     }
 }
 ?>
+</form>
 </div>
 </body>
 </html>
