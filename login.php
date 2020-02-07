@@ -16,14 +16,35 @@
 <div class="centered-form">
 <div class="form-title">
 <h1>Admin login</h1>
+<p>Enter your admin username and password</p>
 <hr>
 </div>
 
-<form action="submit.php" method="POST">
+<form action="" method="POST">
 <input type="text" name="username" placeholder="Username"><br>
-<input type="password" name="password" placeholder="Password">
+<span id="namerr"></span>
+<input type="password" name="password" placeholder="Password" on>
+<span id="passerr"></span>
 <button class="login btn" type="submit">login</button>
 </form>
+<?php
+$inuser=$_POST['username'];
+$inpass=$_POST['password'];
+$sel="SELECT*from admintab order by id asc";
+$res=mysqli_query($connection,$sel);
+while($row=mysqli_fetch_assoc($res)){
+    $username=$row['username'];
+    $password=$row['password'];
+        if($inpass==$password && $username==$inuser)
+    {
+    echo"welcome";
+    
+    }
+    else {
+    echo"login failed";
+    }
+}
+?>
 </div>
 </body>
 </html>
