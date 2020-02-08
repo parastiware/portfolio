@@ -13,14 +13,14 @@
 <body>
 <div class="centered-form">
 <div class="form-title">
-<h1>Admin login</h1>
-<p>Enter your admin username and password</p>
+<h1>Admin registration</h1>
+<p>Enter your following fields to register</p>
 <hr>
 </div>
 
 <form action="server.php" method="POST">
 <input type="text" name="username" placeholder="Username" required><br>
-<span id="namerr"></span>
+<input type="text" name="email" placeholder="Email" required>
 <input type="password" name="password" placeholder="Password" required>
 <span id="passerr"></span>
 <button class="login btn" type="submit" value="submit">login</button>
