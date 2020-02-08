@@ -21,10 +21,12 @@
 <form action="server.php" method="POST">
 <input type="text" name="username" placeholder="Username" required><br>
 <input type="text" name="email" placeholder="Email" required>
-<input type="password" name="password" placeholder="Password" required>
-<span id="passerr"></span>
-<button class="login btn" type="submit" value="submit">login</button>
+<input type="password" name="pass1" placeholder="Password" required>
+<input type="password" name="pass2" placeholder="Confirm Password" required>
+<button class="login btn" type="submit" value="submit">Register</button>
+<p>Already a user<a href="login.php"><strong>Log In<</strong></a></p>
 </form>
+
 </div>
 </body>
 </html>
