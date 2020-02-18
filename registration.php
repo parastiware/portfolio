@@ -15,6 +15,7 @@
 <div class="form-title">
 <h1>Admin registration</h1>
 <p>Enter your following fields to register</p>
+<php? include("errors.php");?>
 <hr>
 </div>
 
@@ -23,8 +24,8 @@
 <input type="text" name="email" placeholder="Email" required>
 <input type="password" name="pass1" placeholder="Password" required>
 <input type="password" name="pass2" placeholder="Confirm Password" required>
-<button class="login btn" type="submit" value="submit">Register</button>
-<p>Already a user<a href="login.php"><strong>Log In<</strong></a></p>
+<button class="login btn" name="register" value="submit">Register</button>
+<span>Already a user <a href="login.php"><strong>Log In</strong></a></span>
 </form>
 
 </div>

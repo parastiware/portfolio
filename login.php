@@ -1,4 +1,4 @@
-<?php include("server.php"); ?>
+<php? include("server.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,14 +16,15 @@
 <h1>Admin login</h1>
 <p>Enter your admin username and password</p>
 <hr>
+<php? include("erros.php");?>
 </div>
-
 <form action="server.php" method="POST">
-<input type="text" name="username" placeholder="Username" required><br>
+<input type="text" name="username" placeholder="Username" ><br>
 <span id="namerr"></span>
-<input type="password" name="password" placeholder="Password" required>
+<input type="password" name="password" placeholder="Password" >
 <span id="passerr"></span>
-<button class="login btn" type="submit" value="submit">login</button>
+<button class="login btn" name="login_user" type="submit">login</button>
+<p>or <a href="registration.php">Register</a></p>
 </form>
 </div>
 </body>
