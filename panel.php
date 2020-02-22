@@ -24,12 +24,10 @@ if(isset($_GET['logout'])){
         <?php
         if(isset($_SESSION['success'])):?>
         <?php
-        echo($_SESSION['detail']);
          echo($_SESSION['success']);
         unset($_SESSION['success']);
         
         ?>
-
         <?php endif ?>
         <?php if(isset($_SESSION['username'])):?>   
         <h1>Welcome to your admin portal <?php echo($_SESSION['username']); ?>

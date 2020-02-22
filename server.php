@@ -64,7 +64,6 @@ if(isset($_POST['register'])){
                     $value=mysqli_fetch_assoc($results);
                     array_push($errors,"Username and password fetched");
                     if(!empty($value)){
-                            $_SESSION['detail']=$value;
                             $_SESSION['username']=$username;
                             $_SESSION['success']="Login Successfull";
                             header('location: panel.php');
