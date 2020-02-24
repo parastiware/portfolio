@@ -1,4 +1,4 @@
-<php? include("server.php");?>
+<php? include('server.php');?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="includes/login.css">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <title>Document</title>
+    <title>login page</title>
 </head>
 <body>
 <div class="centered-form">
@@ -16,7 +16,7 @@
 <h1>Admin login</h1>
 <p>Enter your admin username and password</p>
 <hr>
-<php? include("erros.php");?>
+<php? include('errors.php'); ?>
 </div>
 <form action="server.php" method="POST">
 <input type="text" name="username" placeholder="Username" ><br>

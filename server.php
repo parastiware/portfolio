@@ -3,7 +3,7 @@ session_start();
 
 $username="";
 $email="";
-$errors = [];//error array
+$errors = array();//error array
 //database connected
 $db=mysqli_connect("localhost","root","","cv") or die("could not connect to database");
 //user registration logics 
@@ -56,31 +56,41 @@ if(isset($_POST['register'])){
                     array_push($errors,"password cannot be empty");
                 }
                 if(count($errors)==0){
-
                     $password=md5($password);
-                    echo( $password);
                     $query="SELECT * FROM admintab  WHERE username='$username' AND password1='$password'" ;
                     $results=mysqli_query($db,$query);
                     $value=mysqli_fetch_assoc($results);
-                    array_push($errors,"Username and password fetched");
-                    if(!empty($value)){
-                            $_SESSION['username']=$username;
-                            $_SESSION['success']="Login Successfull";
-                            header('location: panel.php');
-                    }
-                  else{
-                        array_push($errors,"Username or password do not match");
-                        foreach ($errors as $error) {
-                            echo($error);
-                        }
+                            if(!empty($value)){
+                                    $_SESSION['username']=$username;
+                                    $_SESSION['success']="Login Successfull";
+                                    header('location: panel.php');
+                            }
+                            else{
+                                array_push($errors,"Username or password do not match");
+                                header('location: login.php');
+                            }
                          
 
-                  }
-                      
                     }
-         //header('location: login.php');
+                  else {
+                   header('location: login.php');   
+                  }
+                   
+                      
+         }
+        
              
-    }      
+if(isset($_POST['user_review']))
+{
+    $email=mysqli_real_escape_string($db,$_POST['email']);
+    $review=mysqli_real_escape_string($db,$_POST['review']);
+    $date=date('l jS \of F Y h:i:s A');
+    $query="INSERT INTO review (email,datetime,review) VALUES ('$email','$date','$review')";
+    mysqli_query($db,$query);
+    $_SESSION['review']="Review sent successfully";
+    header('location: home.php');
+
+}
                      
                     
 ?>

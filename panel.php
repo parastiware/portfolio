@@ -1,3 +1,5 @@
+
+
 <?php
 session_start();
 
@@ -17,23 +19,104 @@ if(isset($_GET['logout'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="" />
+   <script type="text/javascript">
+    function dataEntry() {
+    $username=$document.getElementById("")
+    
+        }
+    </script>
+
+
     <title> Dashboard</title>
+    
 </head>
 <body>
     <div>
-        <?php
-        if(isset($_SESSION['success'])):?>
-        <?php
-         echo($_SESSION['success']);
-        unset($_SESSION['success']);
         
-        ?>
-        <?php endif ?>
         <?php if(isset($_SESSION['username'])):?>   
         <h1>Welcome to your admin portal <?php echo($_SESSION['username']); ?>
-        </h1>
+       <?php  $db=mysqli_connect("localhost","root","","cv") or die("could not connect to database"); 
+       $query="SELECT * FROM admintab";
+       $result=mysqli_query($db,$query);
+       ?>
+       <h2>List of registered users</h2>
+         <table>
+         <thead>
+         <tr>
+         <th>Username</th>
+        <th>Email</th>
+        <th>Action</th>
+         </tr>
+         </thead>
+         
+        <?php
+        while($data=mysqli_fetch_assoc($result))
+        {
+        ?>
+        <tr>
+        <td><?php echo($data['username']); ?></td>
+        <td><?php echo($data['email']); ?></td>
+        <td>
+            <a href="panel.php?Edit=true&id=<?php echo $data['user_id']?>"><button name="Edit" >Edit</button></a>
+            <a href="panel.php?Delete=true&id=<?php echo $data['user_id']?>"><button name="Delete">delete</button></a>
+            <a href="panel.php?makeadmin=true&id=<?php echo $data['user_id']?>"><button name="makeadmin">makeadmin</button></a>
+        </td>
+        <?php
+        }
+        if(isset($_GET['Edit'])){
+            $id=$_GET['id'];
+            $query="DELETE FROM admintab WHERE id='$id'";
+            $result=mysqli_query($db,$query);
+            if($result)
+            {
+                echo"User removed sucessfully";
+            }
+            else{
+                echo"error couldn't remove user";
+            }
+                $page = $_SERVER['PHP_SELF'];
+                $sec = "0";
+                header("Refresh: $sec; url=$page");
+        }
+        if(isset($_GET['Delete'])){
+            $id=$_GET['id'];
+            $query="INSERT INTO detail(Fname,Mname,Lname) VALUES ('$email','$review')";
+            $result=mysqli_query($db,$query);
+            if($result)
+            {
+                echo"User removed sucessfully";
+            }
+            else{
+                echo"error couldn't remove user";
+            }
+                $page = $_SERVER['PHP_SELF'];
+                $sec = "0";
+                header("Refresh: $sec; url=$page");
+        }
+       //to make default admin of site
+        if(isset($_GET['makeadmin'])){
+            $id=$_GET['id'];
+            $query="INSERT INTO detail(Fname,Mname,Lname,DOB,email) VALUES ('$Fname','$Mname','$Mname','$DOB',$email')";
+            $result=mysqli_query($db,$query);
+            if($result)
+            {
+                echo"User removed sucessfully";
+            }
+            else{
+                echo"error couldn't remove user";
+            }
+                $page = $_SERVER['PHP_SELF'];
+                $sec = "0";
+                header("Refresh: $sec; url=$page");
+        }
+        ?>
+        
+        </table>
         <button><a href="panel.php?logout='1'">LOG OUT</a></button>
+        <button><a href="registration.php">Registration</a></button>
         <?php endif ?>
+        
     </div>
     
     
