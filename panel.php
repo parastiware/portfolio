@@ -5,6 +5,7 @@ session_start();
 
 if(!isset($_SESSION['username'])){
     $_SESSION['msg']="You must log in to continue!!";
+    echo($_SESSION['msg']);
     header('location:login.php');
 }
 if(isset($_GET['logout'])){
@@ -115,6 +116,7 @@ if(isset($_GET['logout'])){
         </table>
         <button><a href="panel.php?logout='1'">LOG OUT</a></button>
         <button><a href="registration.php">Registration</a></button>
+        <button><a href="home.php">View site</a></button>
         <?php endif ?>
         
     </div>

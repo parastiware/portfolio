@@ -81,13 +81,15 @@ if(isset($_POST['register'])){
         
              
 if(isset($_POST['user_review']))
-{
+{   
     $email=mysqli_real_escape_string($db,$_POST['email']);
     $review=mysqli_real_escape_string($db,$_POST['review']);
-    $date=date('l jS \of F Y h:i:s A');
-    $query="INSERT INTO review (email,datetime,review) VALUES ('$email','$date','$review')";
-    mysqli_query($db,$query);
-    $_SESSION['review']="Review sent successfully";
+    $date=date("Y-m-d h:i:sa");
+    $query="INSERT INTO review (email,date_time,review) VALUES ('$email','$date','$review')";
+    if(mysqli_query($db,$query))
+        $_SESSION['review']="Review sent successfully";
+    else
+        $_SESSION['review']="Error occured during processing";
     header('location: home.php');
 
 }
