@@ -1,4 +1,4 @@
-<php? include('server.php');?>
+<php? include( "server.php" );?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +16,7 @@
 <h1>Admin login</h1>
 <p>Enter your admin username and password</p>
 <hr>
-<php? include('errors.php'); ?>
+<php? include( "errors.php" ) ; ?>
 </div>
 <form action="server.php" method="POST">
 <input type="text" name="username" placeholder="Username" ><br>

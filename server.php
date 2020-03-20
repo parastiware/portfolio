@@ -84,13 +84,19 @@ if(isset($_POST['user_review']))
 {   
     $email=mysqli_real_escape_string($db,$_POST['email']);
     $review=mysqli_real_escape_string($db,$_POST['review']);
-    $date=date("Y-m-d h:i:sa");
+     $timezone = date_default_timezone_get();
+    date_default_timezone_set("$timezone");
+    $date = date('m/d/Y h:i:s a', time());
     $query="INSERT INTO review (email,date_time,review) VALUES ('$email','$date','$review')";
-    if(mysqli_query($db,$query))
+    $result= mysqli_query($db,$query);
+    if($result){
         $_SESSION['review']="Review sent successfully";
-    else
+        $_SESSION['date']=$date;
+    }
+    else{
         $_SESSION['review']="Error occured during processing";
-    header('location: home.php');
+    }
+        header('location: home.php');
 
 }
                      
