@@ -99,13 +99,18 @@ if(isset($_GET['logout'])){
         if(isset($_GET['makeadmin'])){
             $id=$_GET['id'];
             $query="INSERT INTO detail(Fname,Mname,Lname,DOB,email) VALUES ('$Fname','$Mname','$Mname','$DOB',$email')";
-            $result=mysqli_query($db,$query);
+            $query1="DELETE * from detail";
+            $result=mysqli_query($db,$query1);
             if($result)
             {
-                echo"User removed sucessfully";
+                $result1=mysqli_query($db,$query);
+                if($result){
+                    echo"Made Admin Successfully";
+                 }
+                
             }
             else{
-                echo"error couldn't remove user";
+                echo"error couldn't process the request";
             }
                 $page = $_SERVER['PHP_SELF'];
                 $sec = "0";
