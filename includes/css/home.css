@@ -1,96 +1,97 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+* {
     margin: 0px;
     padding: 0px;
 }
-.body{
 
+body {
+    font-family: 'Manrope', sans-serif;
     background-color: turquoise;
-    
 }
-.menu{
-    padding:  20px ;
-    background-color:white;
-    margin-bottom:20px;
 
-
+.menu {
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
 }
-.menu ul{
+
+.menu ul {
     float: right;
-  
 }
-.menu ul a li{
+
+.menu ul a li {
     list-style: none;
     display: inline-block;
     padding: 10px 15px 10px 15px;
     text-decoration: none;
-    color:black;
+    color: black;
     outline-style: solid;
     outline-width: thin;
     margin-left: 20px;
     background-color: white;
 }
 
-.menu ul a li:hover{
-   outline-style: solid;
-   outline-color: black;
-   background-origin: padding-box;
-   color: white;
-   background-color: black;
-   transition: ease 0.5s;
+.menu ul a li:hover {
+    outline-style: solid;
+    outline-color: black;
+    background-origin: padding-box;
+    color: white;
+    background-color: black;
+    transition: ease 0.5s;
 }
-.review-form textarea{
+
+.review-form textarea {
     height: 200px;
     width: 500px;
     border: 2px solid black;
     border-radius: 10px;
-
 }
-.review-form textarea:hover{
+
+.review-form textarea:hover {
     background-color: black;
     color: white;
-
 }
-.review-form input{
+
+.review-form input {
     height: 50px;
     width: 200px;
     border: 2px solid black;
     border-radius: 10px;
-
 }
-.review-form input:hover{
+
+.review-form input:hover {
     background-color: black;
     color: white;
-
 }
-.review-form{
+
+.review-form {
     position: relative;
     padding-left: 30%;
     background-color: rgb(97, 78, 97);
 }
-.Social{
+
+.Social {
     margin-top: 30px;
     margin-bottom: 30px;
     padding: 50px 50px 50px 50px;
 }
-.Social ul li{
+
+.Social ul li {
     list-style: none;
     display: inline-block;
     padding: 10px;
-
 }
-.Social ul li img{
+
+.Social ul li img {
     height: 70px;
     width: 70px;
-    padding :10px;
+    padding: 10px;
     margin-right: 10px;
     border: 2px solid black;
-     border-radius: 100px;
+    border-radius: 100px;
 }
 
-.Social ul li img:hover{
- border: 10px solid black;
- transition: ease 0.3s;
-
+.Social ul li img:hover {
+    border: 10px solid black;
+    transition: ease 0.3s;
 }
-
-
