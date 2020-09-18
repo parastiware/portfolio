@@ -41,10 +41,43 @@ $_SESSION['date']="";
     About content here:
    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti eveniet accusamus numquam repudiandae 
        cumque pariatur fugiat hic,
-        officia voluptatum impedit natus qui quos, excepturi blanditiis veritatis iusto autem. Tempore, neque?</p>
-     <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti eveniet accusamus numquam repudiandae 
+        officia voluptatum impedit natus qui quos, excepturi blanditiis veritatis iusto autem. Tempore, neque?
+    
+    
+    
+    
+    
+    </p>
+    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti eveniet accusamus numquam repudiandae 
          cumque pariatur fugiat hic, officia voluptatum impedit natus qui quos, excepturi blanditiis veritatis iusto autem.
-          Tempore, neque?</p>
+          Tempore, neque?
+          <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    </p>
+    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti eveniet accusamus numquam repudiandae 
+       cumque pariatur fugiat hic,
+        officia voluptatum impedit natus qui quos, excepturi blanditiis veritatis iusto autem. Tempore, neque?
+        <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti eveniet accusamus numquam repudiandae 
+       cumque pariatur fugiat hic,
+        officia voluptatum impedit natus qui quos, excepturi blanditiis veritatis iusto autem. Tempore, neque?
+    </p>
 </div>
 <div class="Social">
     <p>Social link here:</p>
