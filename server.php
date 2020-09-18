@@ -56,7 +56,7 @@ if(isset($_POST['register'])){
                 }
                 if(count($errors)==0){
                     $password=md5($password);
-                    $query="SELECT * FROM admintab  WHERE username='$username' AND password1='$password'" ;
+                    $query="SELECT * FROM admintab  WHERE ( username='$username' AND password1='$password') or ( email='$username' AND password1='$password' ) " ;
                     $results=mysqli_query($db,$query);
                     $value=mysqli_fetch_assoc($results);
                             if(!empty($value)){
@@ -83,14 +83,10 @@ if(isset($_POST['user_review']))
 {   
     $email=mysqli_real_escape_string($db,$_POST['email']);
     $review=mysqli_real_escape_string($db,$_POST['review']);
-     $timezone = date_default_timezone_get();
-    date_default_timezone_set("$timezone");
-    $date = date('m/d/Y h:i:s a', time());
-    $query="INSERT INTO review (email,date_time,review) VALUES ('$email','$date','$review')";
+    $query="INSERT INTO review (email,date_time,review) VALUES ('$email','$review')";
     $result= mysqli_query($db,$query);
     if($result){
         $_SESSION['review']="Review sent successfully";
-        $_SESSION['date']=$date;
     }
     else{
         $_SESSION['review']="Error occured during processing";

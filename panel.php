@@ -61,12 +61,25 @@ if(isset($_GET['logout'])){
         <td>
             <a href="panel.php?Edit=true&id=<?php echo $data['user_id']?>"><button name="Edit" >Edit</button></a>
             <a href="panel.php?Delete=true&id=<?php echo $data['user_id']?>"><button name="Delete">delete</button></a>
-            <a href="panel.php?makeadmin=true&id=<?php echo $data['user_id']?>"><button name="makeadmin">makeadmin</button></a>
+            
         </td>
+        </tr>
         <?php
         }
         if(isset($_GET['Edit'])){
-            $id=$_GET['id'];
+            // $id=$_GET['id'];
+            // <div class="detail">
+            //         <table>
+            //         <thead>
+            //         <tr>
+            //         <th>Username</th>
+            //         <th>Email</th>
+            //         <th>Action</th>
+            //         </tr>
+            //         </thead>
+            //         </table>
+            // </div>
+        
             $query="DELETE FROM admintab WHERE id='$id'";
             $result=mysqli_query($db,$query);
             if($result)

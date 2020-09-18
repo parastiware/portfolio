@@ -13,6 +13,7 @@ $_SESSION['date']="";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="includes/css/home.css">
+    <link rel='icon' href='includes/images/favicon/fav.png' type='image/x-icon'/>
     <title>Home_page</title>
 </head>
 <body>
@@ -51,7 +52,7 @@ $_SESSION['date']="";
         <li> <a href="https://www.facebook.com/parastiware/" target="_blank"><img id="logo" src="includes/images/logos/fb.png"></a></li>
         <li> <a href="https://www.linkedin.com/in/parastiware/" target="_blank"><img id="logo" src="includes/images/logos/link.png"></a></li>
         <li> <a href="https://www.instagram.com/paras_tiware/" target="_blank"><img id="logo" src="includes/images/logos/ins.png"></a></li>
-        <li> <a href="https://www.tweeter.com/parastiware/" target="_blank"><img id="logo" src="includes/images/logos/tweet.png"></a></li>
+        <li> <a href="https://www.twitter.com/parastiware/" target="_blank"><img id="logo" src="includes/images/logos/tweet.png"></a></li>
     </ul>
 </div>
 
