@@ -82,16 +82,24 @@ if(isset($_POST['register'])){
 if(isset($_POST['user_review']))
 {   
     $email=mysqli_real_escape_string($db,$_POST['email']);
-    $review=mysqli_real_escape_string($db,$_POST['review']);
-    $query="INSERT INTO review (email,review) VALUES ('$email','$review')";
-    $result= mysqli_query($db,$query);
-    if($result){
-        $_SESSION['review']="Review sent successfully";
-    }
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+         {
+            $_SESSION['review-error'] = "Invalid email format";
+              header('location: home.php#review-form');
+
+         }
     else{
-        $_SESSION['review']="Error occured during processing";
-    }
+        $review=mysqli_real_escape_string($db,$_POST['review']);
+        $query="INSERT INTO review (email,review) VALUES ('$email','$review')";
+        $result= mysqli_query($db,$query);
+        if($result){
+        $_SESSION['review-sucess']="Review sent successfully";
+        }
+        else{
+        $_SESSION['review-error']="Error occured during processing";
+         }
         header('location: home.php#review-form');
+        }
 
 }
                      

@@ -2,8 +2,9 @@
 session_start();
 if(! isset($_SESSION['review']))
 {
-$_SESSION['review']=""; 
-$_SESSION['date']="";
+$_SESSION['review-sucess']=""; 
+$_SESSION['review-error']=""; 
+
 }
 
 ?>
@@ -69,7 +70,7 @@ $_SESSION['date']="";
         </div>
 
         <div class="About">
-            <p id="title"> About content here:</p>
+            <p class="title"> About content here:</p>
             <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti eveniet accusamus numquam repudiandae 
                 cumque pariatur fugiat hic,
                     officia voluptatum impedit natus qui quos, excepturi blanditiis veritatis iusto autem. Tempore, neque?
@@ -112,7 +113,7 @@ $_SESSION['date']="";
         </div>
 </div>
 <div class="Social"  id="Social">
-    <p>Social link here:</p>
+    <p class ="title">Social link here:</p>
     <ul>
         <li> <a href="https://www.facebook.com/parastiware/" target="_blank"><img id="logo" src="includes/images/logos/fb.png"></a></li>
         <li> <a href="https://www.linkedin.com/in/parastiware/" target="_blank"><img id="logo" src="includes/images/logos/link.png"></a></li>
@@ -123,7 +124,7 @@ $_SESSION['date']="";
 </div>
 
 <div class="review-form" id="review-form">
-    <p>Review:</p>
+    <p class="title">Review:</p>
             <form action="server.php" method="POST">
             Email:<br>
             <input type="text" name="email" placeholder="Enter Your Email address" required><br>
@@ -131,7 +132,8 @@ $_SESSION['date']="";
             <textarea  name="review" placeholder="Enter your thought about this site" required></textarea><br>
             <br>
             <button type="submit" name="user_review" class="btn btn-primary" >Submit</button>
-                <span id="success-msg"><?php echo($_SESSION['review']); echo($_SESSION['date']); $_SESSION['review']=""; $_SESSION['date']="";//clear review variable?></span>
+                <span id="success-msg"><?php echo($_SESSION['review-sucess']); $_SESSION['review-sucess']=""; //clear review variable?></span>
+                <span id="error-msg"><?php echo($_SESSION['review-error']); $_SESSION['review-error']=""; //clear review variable?></span>
             </form>
 
 <div>

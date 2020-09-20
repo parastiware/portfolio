@@ -96,3 +96,16 @@ body {
     border: 10px solid rgb(253, 253, 253);
     transition: ease-in 0.3s;
 }
+
+#success-msg {
+    color: green;
+}
+
+#error-msg {
+    color: rgb(255, 0, 0);
+}
+
+.title {
+    font-size: large;
+    font-weight: bold;
+}
