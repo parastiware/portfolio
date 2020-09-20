@@ -83,7 +83,7 @@ if(isset($_POST['user_review']))
 {   
     $email=mysqli_real_escape_string($db,$_POST['email']);
     $review=mysqli_real_escape_string($db,$_POST['review']);
-    $query="INSERT INTO review (email,date_time,review) VALUES ('$email','$review')";
+    $query="INSERT INTO review (email,review) VALUES ('$email','$review')";
     $result= mysqli_query($db,$query);
     if($result){
         $_SESSION['review']="Review sent successfully";
@@ -91,7 +91,7 @@ if(isset($_POST['user_review']))
     else{
         $_SESSION['review']="Error occured during processing";
     }
-        header('location: home.php');
+        header('location: home.php#review-form');
 
 }
                      

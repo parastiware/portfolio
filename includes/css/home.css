@@ -2,15 +2,17 @@
 * {
     margin: 0px;
     padding: 0px;
+    color: rgb(255, 255, 255);
 }
 
 body {
     font-family: 'Manrope', sans-serif;
-    background-color: turquoise;
+    background-color: rgb(5, 5, 5);
+    margin: auto;
 }
 
 .menu {
-    padding: 20px;
+    padding: 50px;
     background-color: white;
     margin-bottom: 20px;
 }
@@ -24,27 +26,25 @@ body {
     display: inline-block;
     padding: 10px 15px 10px 15px;
     text-decoration: none;
+    border-radius: 5px;
     color: black;
-    outline-style: solid;
     outline-width: thin;
     margin-left: 20px;
     background-color: white;
 }
 
 .menu ul a li:hover {
-    outline-style: solid;
-    outline-color: black;
-    background-origin: padding-box;
     color: white;
     background-color: black;
     transition: ease 0.5s;
 }
 
 .review-form textarea {
-    height: 200px;
-    width: 500px;
+    height: 300px;
+    width: 700px;
     border: 2px solid black;
     border-radius: 10px;
+    resize: unset;
 }
 
 .review-form textarea:hover {
@@ -55,6 +55,7 @@ body {
 .review-form input {
     height: 50px;
     width: 200px;
+    color: black;
     border: 2px solid black;
     border-radius: 10px;
 }
@@ -66,8 +67,8 @@ body {
 
 .review-form {
     position: relative;
-    padding-left: 30%;
-    background-color: rgb(97, 78, 97);
+    padding: 20px;
+    background-color: rgb(37, 36, 37);
 }
 
 .Social {
@@ -87,11 +88,11 @@ body {
     width: 70px;
     padding: 10px;
     margin-right: 10px;
-    border: 2px solid black;
+    border: 2px solid rgb(253, 253, 253);
     border-radius: 100px;
 }
 
 .Social ul li img:hover {
-    border: 10px solid black;
-    transition: ease 0.3s;
+    border: 10px solid rgb(253, 253, 253);
+    transition: ease-in 0.3s;
 }
