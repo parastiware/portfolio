@@ -21,9 +21,9 @@ $_SESSION['date']="";
 <div class="menu">
     <ul>
        <a href="#HOME"> <li>HOME</li></a>
-        <a href="#ABOUT"><li>ABOUT </li></a>
-        <a href="#SOCIAL"><li>SOCIAL</li></a>
-        <a href="#REVIEW"><li>REVIEW</li></a>
+        <a href="#About"><li>ABOUT </li></a>
+        <a href="#Social"><li>SOCIAL</li></a>
+        <a href="#review-form"><li>REVIEW</li></a>
     </ul>
     
 </div>
@@ -37,7 +37,7 @@ $_SESSION['date']="";
                 <p>I am <?php echo($data['Fname']); echo("&nbsp;");  echo($data['Mname']); echo("&nbsp;");  echo($data['Lname']);?> and welcome to my site.</p>
 </div>
 
-<div class="About">
+<div class="About" id="About">
     About content here:
    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti eveniet accusamus numquam repudiandae 
        cumque pariatur fugiat hic,
@@ -79,7 +79,7 @@ $_SESSION['date']="";
         officia voluptatum impedit natus qui quos, excepturi blanditiis veritatis iusto autem. Tempore, neque?
     </p>
 </div>
-<div class="Social">
+<div class="Social"  id="Social">
     <p>Social link here:</p>
     <ul>
         <li> <a href="https://www.facebook.com/parastiware/" target="_blank"><img id="logo" src="includes/images/logos/fb.png"></a></li>
@@ -89,7 +89,7 @@ $_SESSION['date']="";
     </ul>
 </div>
 
-<div class="review-form">
+<div class="review-form" id="review-form">
     <p>Review:</p>
             <form action="server.php" method="POST">
             Email:<br>
