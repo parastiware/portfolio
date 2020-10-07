@@ -85,7 +85,7 @@ if(isset($_POST['user_review']))
     if (!filter_var($email, FILTER_VALIDATE_EMAIL))
          {
             $_SESSION['review-error'] = "Invalid email format";
-              header('location: home.php#review-form');
+              header('location: index.php#review-form');
 
          }
     else{
@@ -98,7 +98,7 @@ if(isset($_POST['user_review']))
         else{
         $_SESSION['review-error']="Error occured during processing";
          }
-        header('location: home.php#review-form');
+        header('location: index.php#review-form');
         }
 
 }

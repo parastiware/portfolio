@@ -2,35 +2,30 @@
 * {
     margin: 0px;
     padding: 0px;
-    color: rgb(255, 255, 255);
 }
 
 body {
     font-family: 'Manrope', sans-serif;
-    background-color: rgb(5, 5, 5);
-    margin: auto;
+    background-color: black;
+    color: white;
 }
 
 .menu {
-    padding: 50px;
+    padding: 30px;
     background-color: white;
-    margin-bottom: 20px;
-}
-
-.menu ul {
-    float: right;
+    margin-bottom: 10px;
+    align-content: right;
 }
 
 .menu ul a li {
     list-style: none;
     display: inline-block;
-    padding: 10px 15px 10px 15px;
     text-decoration: none;
+    padding: 10px;
     border-radius: 5px;
     color: black;
-    outline-width: thin;
-    margin-left: 20px;
     background-color: white;
+    margin-left: 20px;
 }
 
 .menu ul a li:hover {

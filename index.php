@@ -33,7 +33,8 @@ $_SESSION['review-error']="";
     
 </div>
 <div class="container">
-        <div class="Intro">
+    <div class="row">
+        <div class="col col-lg-2">
                         <?php
                         $db=mysqli_connect("localhost","root","","cv") or die("Error connecting the database");
                         $query="SELECT* FROM detail";
@@ -42,7 +43,8 @@ $_SESSION['review-error']="";
                         ?>
                         <p>I am <?php echo($data['Fname']); echo("&nbsp;");  echo($data['Mname']); echo("&nbsp;");  echo($data['Lname']);?> and welcome to my site.</p>
         </div>
-        <div id="carouselExampleIndicator" class="carousel slide" data-ride="carousel " >
+        <div class="col">
+            <div id="carouselExampleIndicator" class="carousel slide" data-ride="carousel " >
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicator" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicator" data-slide-to="1"></li>
@@ -67,7 +69,9 @@ $_SESSION['review-error']="";
                         <span class="carousel-control-next-icon" aria-hidden="fasle"></span>
                         <span class="sr-only">Next</span>
                     </a>
+            </div>
         </div>
+    </div>
 
         <div class="About">
             <p class="title"> About content here:</p>

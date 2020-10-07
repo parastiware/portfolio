@@ -38,6 +38,7 @@ if(isset($_GET['logout'])){
     
 </head>
 <body>
+<div class="container">
     <div class="greeting">
         
         <?php if(isset($_SESSION['username'])):?>   
@@ -46,6 +47,7 @@ if(isset($_GET['logout'])){
        $query="SELECT * FROM admintab";
        $result=mysqli_query($db,$query);
        ?>
+        </h1>
 
     <div class="user-table">
        <h2>List of registered users</h2>
@@ -71,7 +73,7 @@ if(isset($_GET['logout'])){
         <td><?php echo($data['email']); ?></td>
         <td>
             <a href="panel.php?Edit=true&id=<?php echo $data['user_id']?>"><button name="makeadmin"type="button" class="btn btn-primary" >Makeadmin</button></a>
-            <a href="panel.php?Delete=true&id=<?php echo $data['user_id']?>"><button name="Delete" type="button" class="btn btn-danger">delete</button></a>
+            <a href="panel.php?Delete=true&id=<?php echo $data['user_id']?>"><button name="Delete" type="button" class="btn btn-danger">Delete</button></a>
         </td>
         </tr>
         </tbody>
@@ -122,13 +124,14 @@ if(isset($_GET['logout'])){
         ?>
 
        
-        <button type="button" class="btn btn-primary"><a href="panel.php?logout='1'">LOG OUT</a></button>
-        <button  type="button" class="btn btn-primary"><a href="registration.php">Registration</a></button>
-        <button  type="button" class="btn btn-primary"><a href="home.php">View site</a></button>
+        <a href="panel.php?logout='1'"> <button type="button" class="btn btn-primary">Sign Out</button></a>
+        <a href="registration.php"><button  type="button" class="btn btn-primary">Registration</button></a>
+        <a href="index.php"><button  type="button" class="btn btn-primary">View site</button></a>
         <?php endif ?>
         
 
-    
+  
+</div>
     
 </body>
 </html>
