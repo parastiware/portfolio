@@ -7,6 +7,10 @@ $errors = array();//error array
 $db=mysqli_connect("localhost","root","","cv") or die("could not connect to database");
 //user registration logics 
 if(isset($_POST['register'])){
+    $Fname=mysqli_real_escape_string($db,$_POST['Fname']);
+    $Mname=mysqli_real_escape_string($db,$_POST['Mname']);
+    $Lname=mysqli_real_escape_string($db,$_POST['Lname']);
+    $DOB=mysqli_real_escape_string($db,$_POST['DOB']);
     $username=mysqli_real_escape_string($db,$_POST['username']);
     $email=mysqli_real_escape_string($db,$_POST['email']);
     $password_1=mysqli_real_escape_string($db,$_POST['pass1']);
@@ -31,7 +35,7 @@ if(isset($_POST['register'])){
         //register if no errors
         if(count($errors)==0){
             $password=md5($password_1);//this will encrypt password
-            $query="INSERT INTO admintab(username,email,password1) VALUES ('$username','$email','$password')";
+            $query="INSERT INTO admintab(Fname,Mname,Lname,DOB,username,email,password1) VALUES ('$Fname','$Mname','$Lname','$DOB','$username','$email','$password')";
             mysqli_query($db,$query);
             $_SESSION['username']=$username;
             $_SESSION['success']="Your are now logged in";

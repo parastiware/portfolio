@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: rgb(87, 85, 85);
+    color: White;
+    width: 100%;
+}
+
+.menu {
+    overflow: hidden;
+    backdrop-filter: opacity(70%) saturate(200%) blur(30px);
+    background-color: rgba(253, 251, 250, 0.9);
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 100%;
+    /* Full width */
+    padding: 10px;
+    z-index: 2;
+}
+
+.menu ul a li {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    margin: 5px 10px 5px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.menu ul a li:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.container {
+    justify-content: center;
+    margin: 10px 20px 10px 100px;
+    padding: 10px 10px 10px 10px;
+}
+
+.title {
+    margin-left: 20px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.About div {
+    margin: 40px 20px 10px 100px;
+    padding: 10px 10px 10px 10px;
+}
+
+.review-form {
+    background-color: black;
+    color: white;
+}
+
+.review-form textarea {
+    height: 300px;
+    width: 300px;
+    border: 2px solid rgb(250, 248, 248);
+    border-radius: 10px;
+    resize: unset;
+    background-color: rgb(206, 206, 206);
+    color: black;
+}
+
+.review-form textarea:hover {
+    background-color: rgb(255, 249, 249);
+    color: rgb(0, 0, 0);
+}
+
+.review-form input {
+    height: 50px;
+    width: 200px;
+    background-color: rgb(206, 206, 206);
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.review-form input:hover {
+    background-color: rgb(255, 249, 249);
+    color: rgb(0, 0, 0);
+}
+
+.review-form {
+    position: relative;
+    padding: 20px;
+    background-color: rgb(37, 36, 37);
+}
+
+.Social div {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 50px 50px 50px 50px;
+}
+
+.Social ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.Social ul li img {
+    height: 70px;
+    width: 70px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid rgb(253, 253, 253);
+    border-radius: 100px;
+}
+
+.Social ul li img:hover {
+    border: 10px solid rgb(253, 253, 253);
+    transition: ease-in 0.3s;
+}
+
+#success-msg {
+    color: green;
+}
+
+#error-msg {
+    color: rgb(255, 0, 0);
+}
+
+.row {
+    margin-top: 20%;
+    z-index: 0;
+}
